@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <title>Portfolio Web site</title>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p> mon metier </p>
+                <h1>Bonjour, je m'appelle <span>Rachfane</span> <br> </h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+
+    <div class="about">
+        <div id="container">
+            <div id="row">
+                <div class="about-col-1">
+                    <img src="images/" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me </h1>
+                    <p>
+                        La notoriété est le niveau de reconnaissance ou de familiarité
+                        qu’une personne, une entreprise ou une marque a auprès du grand public.
+                        C’est un aspect important de la réputation
+                        et de l’image de marque d’une entreprise ou d’une personne, car une
+                        notoriété élevée peut contribuer à renforcer la confiance des consommateurs
+                        et de partenaires commerciaux.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br> Infra et reseau </li>
+                            <li><span>UI/UX</span><br> Infra et reseau </li>
+                            <li><span>UI/UX</span><br> Vendeur de TAcos </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>UI/UX</span><br> Infra et reseau </li>
+                            <li><span>UI/UX</span><br> Infra et reseau </li>
+                            <li><span>UI/UX</span><br> voleur a plei temps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>UI/UX</span><br> Infra et reseau </li>
+                            <li><span>UI/UX</span><br> Infra et reseau </li>
+                            <li><span>UI/UX</span><br> je souleve ta go </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+
+    <div class="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-duotone fa-router"></i>
+                    <h2>Infra Reseau</h2>
+                    <p> qu'est ce que l'on pourrait mettre ici ?</p>
+                    <a href="#">learn more </a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-linux" style="color: #09224e;"></i>
+                    <h2>Infra Reseau</h2>
+                    <p>un petit texte pour ici </p>
+                    <a href="#">learn more </a>
+                </div>
+                <div>
+                    <h2>Infra Reseau</h2>
+                    <p>il va faloi que je me fasse un truc pour le texte</p>
+                    <a href="#">learn more </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        var tabLinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tabLink of tabLinks) {
+                tabLink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+</body>
+
+</html>
